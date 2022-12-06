@@ -592,7 +592,6 @@ function Library.AddWindow(s)
                     end)
                     OptionHolder:TweenSize(UDim2.new(1, 0, 0, OptionList.AbsoluteContentSize.Y + 15), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .15, true)
             end
-            return DropdownFunc
         end
         return TabFunctions
     end
