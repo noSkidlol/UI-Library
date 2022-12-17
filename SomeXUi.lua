@@ -795,9 +795,9 @@ function SomeLib:Window(text,mainclr,cls)
 		end
 
 		local ChannelHold = {}
-		function ChannelHold:Channel(text,ico)
-			local Icon = ico or ""
-			local ChannelIcon = Instance.new("ImageLabel")
+		function ChannelHold:Channel(text)
+			local Icon = ""
+			local ChannelIcon = Instance.new("TextLabel")
 			local ChannelBtnOutline = Instance.new("Frame")
 			local ChannelBtnOutlineCorner = Instance.new("UICorner")
 			local ChannelBtn = Instance.new("TextButton")
@@ -837,8 +837,10 @@ function SomeLib:Window(text,mainclr,cls)
 			ChannelIcon.BackgroundTransparency = 1.000
 			ChannelIcon.Position = UDim2.new(0.0234146333, 0, 0.12, 0)
 			ChannelIcon.Size = UDim2.new(0, 20, 0, 20)
-			ChannelIcon.Image = Icon
-			ChannelIcon.ImageTransparency = 0
+			ChannelIcon.Text = Icon
+			ChannelIcon.TextColor3 = Color3.fromRGB(230,230,230)
+                        ChannelIcon.TextScaled = true
+                        ChannelIcon.Font = Enum.Font.Gotham
 
 			ChannelBtnTitle.Name = "ChannelBtnTitle"
 			ChannelBtnTitle.Parent = ChannelBtn
